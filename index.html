@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Akhila! 🎂✨</title>
+  <meta name="description" content="A magical birthday wish for Akhila Jampala – crafted with love on her special day, June 9th 2026!"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Floating Confetti Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Floating Hearts -->
+  <div class="hearts-container" id="heartsContainer"></div>
+
+  <!-- ===== SECTION 1: HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <img src="images/akhila1.jpg" alt="Akhila – Birthday celebration" class="hero-bg-img" id="heroBgImg"/>
+    <div class="hero-content">
+      <div class="crown-emoji animate-bounce">👑</div>
+      <p class="hero-subtitle animate-fadein" style="animation-delay:0.3s">Today the world celebrates</p>
+      <h1 class="hero-name animate-fadein" style="animation-delay:0.6s">
+        <span class="name-line">Happy Birthday</span>
+        <span class="name-highlight">Akhila Jampala</span>
+      </h1>
+      <div class="hero-date animate-fadein" style="animation-delay:0.9s">
+        <span class="date-badge">🎂 June 9, 2005 → Forever Young 🎂</span>
+      </div>
+      <p class="hero-tagline animate-fadein" style="animation-delay:1.2s">
+        "Some people make the world more special just by being in it — you are one of them."
+      </p>
+      <a href="#wishes" class="hero-cta animate-fadein" style="animation-delay:1.5s" id="heroCta">
+        Open Your Gift 🎁
+      </a>
+    </div>
+    <div class="scroll-arrow animate-bounce-slow">↓</div>
+  </section>
+
+  <!-- ===== SECTION 2: COUNTDOWN / AGE REVEAL ===== -->
+  <section class="age-reveal" id="ageReveal">
+    <div class="container">
+      <div class="stars-bg"></div>
+      <h2 class="section-title">She's Turning</h2>
+      <div class="age-number" id="ageNumber">21</div>
+      <p class="age-tagline">Years of pure magic, laughter & love 💫</p>
+      <div class="age-facts">
+        <div class="fact-card" id="fact1">
+          <span class="fact-icon">🌟</span>
+          <span class="fact-num" data-target="7665">0</span>
+          <span class="fact-label">Days of Sunshine</span>
+        </div>
+        <div class="fact-card" id="fact2">
+          <span class="fact-icon">😂</span>
+          <span class="fact-num" data-target="183960">0</span>
+          <span class="fact-label">Laughs Shared</span>
+        </div>
+        <div class="fact-card" id="fact3">
+          <span class="fact-icon">💖</span>
+          <span class="fact-num" data-target="365">0</span>
+          <span class="fact-label">Reasons We Love You</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3A: AKHILA PHOTO SLIDESHOW ===== -->
+  <section class="slideshow-section" id="slideshowSection">
+    <div class="slideshow-header">
+      <h2 class="section-title gradient-text">✨ The Star of the Day ✨</h2>
+      <p class="section-desc">Every photo tells a story of someone truly extraordinary 💖</p>
+    </div>
+    <div class="slideshow-wrapper" id="slideshowWrapper">
+      <div class="slide active" id="slide1">
+        <img src="images/akhila1.jpg" alt="Akhila – Photo 1"/>
+        <div class="slide-caption">
+          <span class="slide-cap-icon">🌟</span>
+          <p>The one who makes every moment brighter</p>
+        </div>
+      </div>
+      <div class="slide" id="slide2">
+        <img src="images/akhila2.jpg" alt="Akhila – Photo 2"/>
+        <div class="slide-caption">
+          <span class="slide-cap-icon">💖</span>
+          <p>Beautiful inside and out — always and forever</p>
+        </div>
+      </div>
+      <div class="slide" id="slide3">
+        <img src="images/akhila3.jpg" alt="Akhila – Photo 3"/>
+        <div class="slide-caption">
+          <span class="slide-cap-icon">🦋</span>
+          <p>Born to shine, destined for greatness</p>
+        </div>
+      </div>
+      <!-- Slideshow Controls -->
+      <button class="slide-btn prev-btn" id="prevBtn" onclick="changeSlide(-1)">&#8249;</button>
+      <button class="slide-btn next-btn" id="nextBtn" onclick="changeSlide(1)">&#8250;</button>
+      <div class="slide-dots" id="slideDots">
+        <span class="dot active" id="dot0" onclick="goToSlide(0)"></span>
+        <span class="dot" id="dot1" onclick="goToSlide(1)"></span>
+        <span class="dot" id="dot2" onclick="goToSlide(2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3B: PHOTO GALLERY ===== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <h2 class="section-title gradient-text">Moments That Matter</h2>
+      <p class="section-desc">Every snapshot a treasure, every memory a gift 📸</p>
+      <div class="gallery-grid">
+        <div class="gallery-card big" id="galleryCard1">
+          <img src="images/akhila1.jpg" alt="Akhila Photo 1"/>
+          <div class="gallery-overlay">
+            <p>The queen herself ✨</p>
+          </div>
+        </div>
+        <div class="gallery-card" id="galleryCard2">
+          <img src="images/akhila2.jpg" alt="Akhila Photo 2"/>
+          <div class="gallery-overlay">
+            <p>So radiant! 💫</p>
+          </div>
+        </div>
+        <div class="gallery-card" id="galleryCard3">
+          <img src="images/akhila3.jpg" alt="Akhila Photo 3"/>
+          <div class="gallery-overlay">
+            <p>Pure magic 🌸</p>
+          </div>
+        </div>
+        <div class="gallery-card" id="galleryCard4">
+          <img src="images/birthday_cake.png" alt="Birthday Cake"/>
+          <div class="gallery-overlay">
+            <p>Make a Wish! 🎂</p>
+          </div>
+        </div>
+        <div class="gallery-card big" id="galleryCard5">
+          <img src="images/birthday_hero_banner.png" alt="Birthday Celebration"/>
+          <div class="gallery-overlay">
+            <p>Here's to You, Akhila! 🎉</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: BIRTHDAY WISHES ===== -->
+  <section class="wishes" id="wishes">
+    <div class="container">
+      <h2 class="section-title">From the Heart 💌</h2>
+      <div class="wish-letter">
+        <div class="letter-header">
+          <span class="letter-icon">💌</span>
+          <span class="letter-to">To: My Dearest Akhila</span>
+        </div>
+        <div class="letter-body">
+          <p>Hey <strong>Akhila</strong>,</p>
+          <p>
+            On this beautiful day — <em>June 9th, 2026</em> — I want to pause everything just to say:
+            <strong>you are one of the most wonderful people I've ever known</strong>. 🌟
+          </p>
+          <p>
+            You were born on a day the world decided it needed a little more sunshine, a little more laughter,
+            and a whole lot of love. And that's exactly what you bring into every room you walk into.
+          </p>
+          <p>
+            I've watched you grow into someone incredibly <em>strong, kind, brilliant, and beautiful</em> —
+            inside and out. Every moment with you has been a memory I'll carry forever.
+          </p>
+          <p>
+            On your 21st birthday, I wish you:<br/>
+            ✨ <strong>A life full of adventures</strong> that take your breath away<br/>
+            🌸 <strong>Love that feels like home</strong> no matter where you are<br/>
+            🔥 <strong>Dreams so big</strong> that even the sky is just the beginning<br/>
+            😂 <strong>Laughter so pure</strong> it echoes in every corner of the universe<br/>
+            💪 <strong>The courage</strong> to chase everything your heart desires
+          </p>
+          <p>
+            Thank you for being <em>YOU</em> — for being my <strong>best friend</strong>,
+            my partner in every crazy adventure, and the person who always knows how to make everything better.
+          </p>
+          <p class="letter-closing">
+            Today is YOUR day. Celebrate it like the queen you are. 👑<br/>
+            I love you to the stars and back, forever and always. 💫
+          </p>
+          <p class="letter-sign">
+            With all my love & heart full of smiles,<br/>
+            <span class="sign-name">Your Best Friend 🤍</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: SPECIAL WISHES CARDS ===== -->
+  <section class="wish-cards-section" id="wishCards">
+    <div class="container">
+      <h2 class="section-title">21 Reasons You're Amazing</h2>
+      <div class="wish-cards-grid">
+        <div class="wish-card" id="wc1"><span class="wc-num">01</span><span class="wc-icon">🌺</span><p>Your smile lights up every room you enter</p></div>
+        <div class="wish-card" id="wc2"><span class="wc-num">02</span><span class="wc-icon">💡</span><p>Your mind is brilliant and creative beyond measure</p></div>
+        <div class="wish-card" id="wc3"><span class="wc-num">03</span><span class="wc-icon">🤗</span><p>You give the warmest, most comforting hugs</p></div>
+        <div class="wish-card" id="wc4"><span class="wc-num">04</span><span class="wc-icon">😂</span><p>Your laughter is completely contagious and joyful</p></div>
+        <div class="wish-card" id="wc5"><span class="wc-num">05</span><span class="wc-icon">💪</span><p>Your strength through hard times inspires everyone around you</p></div>
+        <div class="wish-card" id="wc6"><span class="wc-num">06</span><span class="wc-icon">🌟</span><p>You make ordinary moments feel extraordinary</p></div>
+        <div class="wish-card" id="wc7"><span class="wc-num">07</span><span class="wc-icon">🎨</span><p>Your creativity paints the world in beautiful colors</p></div>
+        <div class="wish-card" id="wc8"><span class="wc-num">08</span><span class="wc-icon">🕊️</span><p>Your kindness and empathy touch every soul</p></div>
+        <div class="wish-card" id="wc9"><span class="wc-num">09</span><span class="wc-icon">🌙</span><p>You're there for others even in your own dark times</p></div>
+        <div class="wish-card" id="wc10"><span class="wc-num">10</span><span class="wc-icon">🌊</span><p>Your passion flows like an ocean — deep and unstoppable</p></div>
+        <div class="wish-card" id="wc11"><span class="wc-num">11</span><span class="wc-icon">🎵</span><p>Your energy is music to everyone around you</p></div>
+        <div class="wish-card" id="wc12"><span class="wc-num">12</span><span class="wc-icon">🌷</span><p>Your presence is like a garden — always blooming</p></div>
+        <div class="wish-card" id="wc13"><span class="wc-num">13</span><span class="wc-icon">⭐</span><p>You have a star quality that can't be dimmed</p></div>
+        <div class="wish-card" id="wc14"><span class="wc-num">14</span><span class="wc-icon">🧠</span><p>Your wisdom goes far beyond your years</p></div>
+        <div class="wish-card" id="wc15"><span class="wc-num">15</span><span class="wc-icon">🎯</span><p>You're incredibly focused and determined when it matters</p></div>
+        <div class="wish-card" id="wc16"><span class="wc-num">16</span><span class="wc-icon">🦋</span><p>You've transformed beautifully through every challenge</p></div>
+        <div class="wish-card" id="wc17"><span class="wc-num">17</span><span class="wc-icon">🌈</span><p>You bring color and hope into grey days</p></div>
+        <div class="wish-card" id="wc18"><span class="wc-num">18</span><span class="wc-icon">🍀</span><p>Lucky is anyone who gets to call you a friend</p></div>
+        <div class="wish-card" id="wc19"><span class="wc-num">19</span><span class="wc-icon">🏆</span><p>You're a champion in everything you put your heart into</p></div>
+        <div class="wish-card" id="wc20"><span class="wc-num">20</span><span class="wc-icon">🔮</span><p>Your future is as magical as you are</p></div>
+        <div class="wish-card highlight-card" id="wc21"><span class="wc-num">21</span><span class="wc-icon">💎</span><p>Simply being YOU — that's more than enough. You're a rare gem.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: CAKE BLOW INTERACTION ===== -->
+  <section class="cake-section" id="cakeSection">
+    <div class="container">
+      <h2 class="section-title">Make a Wish! 🕯️</h2>
+      <p class="section-desc">Click the candles to blow them out & make your birthday wish!</p>
+      <div class="cake-wrapper">
+        <img src="images/birthday_cake.png" alt="Birthday Cake" class="cake-img" id="cakeImg"/>
+        <div class="candles-row" id="candlesRow">
+          <div class="candle" id="candle1" onclick="blowCandle(this)"><div class="flame"></div></div>
+          <div class="candle" id="candle2" onclick="blowCandle(this)"><div class="flame"></div></div>
+          <div class="candle" id="candle3" onclick="blowCandle(this)"><div class="flame"></div></div>
+          <div class="candle" id="candle4" onclick="blowCandle(this)"><div class="flame"></div></div>
+          <div class="candle" id="candle5" onclick="blowCandle(this)"><div class="flame"></div></div>
+        </div>
+        <div class="wish-popup" id="wishPopup">
+          <span class="wish-popup-emoji">✨🎉✨</span>
+          <h3>Your Wish Has Been Sent to the Universe!</h3>
+          <p>May everything your heart desires come true, Akhila! 💫</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 7: STARS NIGHT CLOSING ===== -->
+  <section class="closing" id="closing">
+    <img src="images/stars_night_wish.png" alt="Starry Night" class="closing-bg"/>
+    <div class="closing-overlay"></div>
+    <div class="closing-content">
+      <div class="closing-emoji animate-float">🌙</div>
+      <h2 class="closing-title">
+        Happy 21st Birthday,<br/>
+        <span class="closing-name">Akhila! 🥂</span>
+      </h2>
+      <p class="closing-quote">
+        "Not just a year older — a year more magical, more powerful, more YOU."
+      </p>
+      <div class="closing-hearts">
+        <span class="ch animate-float" style="animation-delay:0s">💖</span>
+        <span class="ch animate-float" style="animation-delay:0.3s">💛</span>
+        <span class="ch animate-float" style="animation-delay:0.6s">💜</span>
+        <span class="ch animate-float" style="animation-delay:0.9s">💙</span>
+        <span class="ch animate-float" style="animation-delay:1.2s">💚</span>
+      </div>
+      <button class="burst-btn" id="burstBtn" onclick="triggerBurst()">🎆 Celebrate! 🎆</button>
+    </div>
+  </section>
+
+  <!-- Music Toggle -->
+  <div class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Toggle Birthday Music">
+    🎵
+  </div>
+
+  <!-- Hidden YouTube Player -->
+  <div id="ytPlayerWrapper" style="position:fixed;bottom:-9999px;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;">
+    <div id="ytPlayer"></div>
+  </div>
+
+  <!-- YouTube IFrame API -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
